@@ -52,7 +52,7 @@ namespace SoundBeacon
             if (hasSound)
             {
                 StartPlayback();
-                Debug.Log($"[SoundBeacon] 信标已初始化于位置: {transform.position}");
+            Debug.Log($"[SoundBeacon] 信标已初始化于位置: {transform.position}");
             }
             else
             {
@@ -215,7 +215,7 @@ namespace SoundBeacon
                 channel.set3DMinMaxDistance(minDistance, maxDistance);
                 
                 Debug.Log($"[SoundBeacon] 播放音效于位置: ({pos.x:F1}, {pos.y:F1}, {pos.z:F1})");
-            }
+                }
             catch (Exception e)
             {
                 Debug.LogError($"[SoundBeacon] 播放音效异常: {e.Message}");
@@ -256,7 +256,7 @@ namespace SoundBeacon
                 bool isPlaying = false;
                 channel.isPlaying(out isPlaying);
                 if (isPlaying)
-                {
+            {
                     channel.stop();
                 }
             }
